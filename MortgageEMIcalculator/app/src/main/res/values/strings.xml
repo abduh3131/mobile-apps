@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Asi1</string>
+
+    <string name="nav_go_emi">EMI Calculator</string>
+    <string name="nav_go_income_expense">Income &amp; Expenses</string>
+    <string name="nav_go_summary">Summary</string>
+
+    <string name="emi_title">EMI Calculator</string>
+    <string name="emi_loan_amount">Loan Amount</string>
+    <string name="emi_interest">Annual Interest (%)</string>
+    <string name="emi_years">Tenure (years)</string>
+    <string name="emi_months">Tenure (months)</string>
+    <string name="emi_calculate">Calculate EMI</string>
+    <string name="emi_result">Monthly EMI:</string>
+
+    <string name="income_expense_title">Income &amp; Expenses</string>
+    <string name="income_monthly">Monthly Income</string>
+    <string name="expense_add_title">Add Expense</string>
+    <string name="expense_label">Label</string>
+    <string name="expense_amount">Amount</string>
+    <string name="expense_recurring">Recurring (monthly)</string>
+    <string name="expense_add">Add</string>
+    <string name="expenses_list">Your Expenses</string>
+    <string name="delete">Delete</string>
+
+    <string name="summary_title">Budget Balance</string>
+    <string name="summary_income">Income (Monthly)</string>
+    <string name="summary_emi">EMI (Monthly)</string>
+    <string name="summary_recurring">Recurring Expenses (Monthly)</string>
+    <string name="summary_variable">Variable/One-time Expenses (This month)</string>
+    <string name="summary_total_outflow">Total Outflow (EMI + all expenses)</string>
+    <string name="summary_savings">Estimated Savings</string>
+    <string name="summary_deficit">Monthly Deficit</string>
+    <string name="share_summary">Share Summary</string>
+
+    <string name="hint_label">e.g., Groceries</string>
+    <string name="hint_amount">0.00</string>
+</resources>
