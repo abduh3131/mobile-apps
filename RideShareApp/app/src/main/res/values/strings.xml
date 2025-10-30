@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RideShare</string>
+    <string name="welcome_title">Welcome to RideShare</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="request_ride">Request Ride</string>
+    <string name="track_trip">Track Trip</string>
+</resources>
