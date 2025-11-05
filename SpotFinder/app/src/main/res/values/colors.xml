@@ -1,0 +1,8 @@
+<resources>
+    <color name="colorBackground">#101317</color>
+    <color name="colorSurface">#171A1F</color>
+    <color name="colorTextPrimary">#E6E9EE</color>
+    <color name="colorTextSecondary">#A9B1BD</color>
+    <color name="colorBorder">#2B313A</color>
+    <color name="colorAccent">#00A99D</color>
+</resources>
