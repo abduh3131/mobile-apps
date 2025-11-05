@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">SpotFinder</string>
+    <string name="home_title">SpotFinder</string>
+    <string name="hint_search_address">Search address</string>
+    <string name="action_search">Search</string>
+    <string name="action_add">Add</string>
+    <string name="action_view_all">View All</string>
+    <string name="action_my_location">My Location</string>
+    <string name="label_recent">Recent</string>
+    <string name="msg_not_found">Not found.</string>
+    <string name="msg_invalid_input">Please fix the highlighted fields.</string>
+    <string name="msg_geocode_failed">Geocoding failed.</string>
+    <string name="msg_delete_confirm">Delete this location?</string>
+    <string name="msg_delete">Delete</string>
+    <string name="msg_cancel">Cancel</string>
+    <string name="title_locations">Locations</string>
+    <string name="title_edit_location">Edit Location</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_latitude">Latitude</string>
+    <string name="hint_longitude">Longitude</string>
+    <string name="action_geocode">Geocode from Address</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="title_map">Map</string>
+    <string name="title_settings">Settings</string>
+    <string name="hint_api_key">Positionstack access key</string>
+    <string name="action_test_key">Test Key</string>
+    <string name="msg_key_saved">Key saved.</string>
+    <string name="msg_key_test_success">Key works!</string>
+    <string name="msg_key_test_failed">Key failed.</string>
+    <string name="msg_my_location_stub">Feature coming soon.</string>
+    <string name="msg_recent_empty_title">No recent items</string>
+    <string name="msg_recent_empty_hint">Add a location to see it here</string>
+    <string name="msg_key_missing">Enter your positionstack key in Settings.</string>
+</resources>
