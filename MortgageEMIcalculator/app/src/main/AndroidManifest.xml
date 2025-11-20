@@ -7,16 +7,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Asi1">
         <activity
-            android:name=".EmiActivity"
+            android:name=".PlanLookupActivity"
             android:exported="false" />
         <activity
-            android:name=".IncomeActivity"
+            android:name=".ManageItemsActivity"
             android:exported="false" />
         <activity
-            android:name=".SummaryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".FoodOrderActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
