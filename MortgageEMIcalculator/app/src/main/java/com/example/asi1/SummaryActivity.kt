@@ -10,6 +10,7 @@ class SummaryActivity : AppCompatActivity() {
     private lateinit var db: AppDb
     private val prefsName = "asi1_prefs"
 
+    // shows totals and net amount
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_summary)
@@ -46,6 +47,7 @@ class SummaryActivity : AppCompatActivity() {
         tvNetValue.text = String.format("%,.2f", abs(net))
     }
 
+    // closes database when leaving
     override fun onDestroy() {
         super.onDestroy()
         db.close()
