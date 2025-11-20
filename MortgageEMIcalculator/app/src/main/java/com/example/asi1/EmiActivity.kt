@@ -12,6 +12,7 @@ import kotlin.math.pow
 class EmiActivity : AppCompatActivity() {
     private val prefsName = "asi1_prefs"
 
+    // sets up EMI calculator screen
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emi)

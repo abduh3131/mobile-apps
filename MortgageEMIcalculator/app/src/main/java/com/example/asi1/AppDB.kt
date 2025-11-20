@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 class AppDb(ctx: Context) : SQLiteOpenHelper(ctx, "asi1.db", null, 1) {
+    // builds expense table
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
             """
@@ -21,8 +22,10 @@ class AppDb(ctx: Context) : SQLiteOpenHelper(ctx, "asi1.db", null, 1) {
         )
     }
 
+    // upgrades schema (not used yet)
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) { }
 
+    // stores a new expense
     fun insertExpense(label: String, amount: Double, recurring: Int) {
         val values = ContentValues().apply {
             put("label", label)
@@ -32,10 +35,12 @@ class AppDb(ctx: Context) : SQLiteOpenHelper(ctx, "asi1.db", null, 1) {
         writableDatabase.insert("expenses", null, values)
     }
 
+    // deletes one expense
     fun deleteExpense(id: Long) {
         writableDatabase.delete("expenses", "_id=?", arrayOf(id.toString()))
     }
 
+    // fetches all expenses
     fun getAllExpenses(): Cursor {
         return readableDatabase.query(
             "expenses",
@@ -45,6 +50,7 @@ class AppDb(ctx: Context) : SQLiteOpenHelper(ctx, "asi1.db", null, 1) {
         )
     }
 
+    // calculates recurring and variable totals
     fun computeTotals(): Pair<Double, Double> {
         val c = readableDatabase.rawQuery("SELECT recurring, SUM(amount) FROM expenses GROUP BY recurring", null)
         var recurring = 0.0

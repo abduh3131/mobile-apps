@@ -15,6 +15,7 @@ class IncomeActivity : AppCompatActivity() {
     private val prefsName = "asi1_prefs"
     private var adapter: SimpleCursorAdapter? = null
 
+    // sets up income and expense screen
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_income)
@@ -63,6 +64,7 @@ class IncomeActivity : AppCompatActivity() {
         }
     }
 
+    // reloads expenses into the list view
     private fun refreshList(listView: ListView) {
         val c: Cursor = db.getAllExpenses()
         if (adapter == null) {
@@ -80,6 +82,7 @@ class IncomeActivity : AppCompatActivity() {
         }
     }
 
+    // closes resources when leaving
     override fun onDestroy() {
         super.onDestroy()
         adapter?.cursor?.close()

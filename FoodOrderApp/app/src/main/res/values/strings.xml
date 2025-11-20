@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Food Order Planner</string>
+    <string name="pick_date">Pick date</string>
+    <string name="target_cost">Target cost per day</string>
+    <string name="save_plan">Save plan</string>
+    <string name="manage_items">Manage items</string>
+    <string name="view_plan">View saved plan</string>
+    <string name="selected_total">Selected total:</string>
+    <string name="plan_lookup_title">Saved plan</string>
+    <string name="no_plan">No plan stored for this date.</string>
+    <string name="add_item">Add item</string>
+    <string name="update_item">Update item</string>
+    <string name="delete_item">Delete</string>
+    <string name="item_name_hint">Food name</string>
+    <string name="item_cost_hint">Cost</string>
+    <string name="plan_for">Plan for</string>
+</resources>
