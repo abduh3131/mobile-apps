@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryPurple">#6750A4</color>
+    <color name="primaryPurpleDark">#4E3E9D</color>
+    <color name="accentTeal">#4DD0E1</color>
+    <color name="surface">#F7F5FF</color>
+    <color name="surfaceContainer">#FFFFFF</color>
+    <color name="surfaceVariant">#ECE8FF</color>
+    <color name="textPrimary">#1D1B2F</color>
+    <color name="textSecondary">#5D5A78</color>
+    <color name="checkboxTint">#6750A4</color>
+    <color name="backButtonTint">#2D254D</color>
+    <color name="red">#FF6B6B</color>
+    <color name="blue">#4D96FF</color>
+    <color name="green">#1DD1A1</color>
+</resources>

@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Lab2ToDoApp" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryPurple</item>
+        <item name="colorPrimaryContainer">@color/primaryPurpleDark</item>
+        <item name="colorSecondary">@color/accentTeal</item>
+        <item name="colorSecondaryContainer">@color/surfaceVariant</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/textPrimary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/textPrimary</item>
+        <item name="android:statusBarColor">@color/primaryPurpleDark</item>
+        <item name="android:navigationBarColor">@color/primaryPurpleDark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowBackground">@color/surface</item>
+    </style>
+
+    <style name="Theme.Lab2ToDoApp" parent="Base.Theme.Lab2ToDoApp" />
+</resources>
