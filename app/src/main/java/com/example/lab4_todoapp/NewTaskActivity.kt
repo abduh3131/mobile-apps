@@ -9,13 +9,16 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
+import java.io.File
 import java.util.Calendar
 
 // screen that creates a brand new task
 class NewTaskActivity : AppCompatActivity() {
     private var selectedImageUri: Uri? = null
+    private var pendingCameraUri: Uri? = null
 
     // sets up the new task form and handles save
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +31,8 @@ class NewTaskActivity : AppCompatActivity() {
         val saveButton = findViewById<MaterialButton>(R.id.saveTaskButton)
         val backButton = findViewById<MaterialButton>(R.id.bkbutton)
         val selectImageButton = findViewById<MaterialButton>(R.id.uploadImageButton)
+        val captureImageButton = findViewById<MaterialButton>(R.id.captureImageButton)
+        val deleteButton = findViewById<MaterialButton>(R.id.deleteTaskButton)
         val imagePreview = findViewById<ImageView>(R.id.imagePreview)
 
         val calendar = Calendar.getInstance()
@@ -37,6 +42,8 @@ class NewTaskActivity : AppCompatActivity() {
         val colorBlue = findViewById<View>(R.id.colorBlue)
         val colorGreen = findViewById<View>(R.id.colorGreen)
         val colorViews = listOf(colorRed, colorBlue, colorGreen)
+
+        deleteButton.visibility = View.GONE
 
         // clears any old date text
         dateInput.text?.clear()
@@ -86,9 +93,29 @@ class NewTaskActivity : AppCompatActivity() {
                 }
             }
 
+        val captureImageLauncher = registerForActivityResult(ActivityResultContracts.TakePicture()) { success: Boolean ->
+            if (success) {
+                selectedImageUri = pendingCameraUri
+                imagePreview.setImageURI(selectedImageUri)
+                imagePreview.visibility = View.VISIBLE
+            } else {
+                pendingCameraUri = null
+            }
+        }
+
         // opens gallery/file picker for image
         selectImageButton.setOnClickListener {
             imagePickerLauncher.launch(arrayOf("image/*"))
+        }
+
+        captureImageButton.setOnClickListener {
+            pendingCameraUri = createImageUri()
+            val targetUri = pendingCameraUri
+            if (targetUri != null) {
+                captureImageLauncher.launch(targetUri)
+            } else {
+                Toast.makeText(this, "Unable to create file for camera", Toast.LENGTH_SHORT).show()
+            }
         }
 
         // closes screen without saving
@@ -115,6 +142,18 @@ class NewTaskActivity : AppCompatActivity() {
 
             setResult(RESULT_OK, result)
             finish()
+        }
+    }
+
+    //creates a file-backed uri for the camera
+    private fun createImageUri(): Uri? {
+        return try {
+            val imageDir = File(cacheDir, "images").apply { mkdirs() }
+            val imageFile = File.createTempFile("task_photo_", ".jpg", imageDir)
+            FileProvider.getUriForFile(this, "${packageName}.fileprovider", imageFile)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
         }
     }
 }
